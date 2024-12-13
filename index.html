@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Portfolio Webpage</title>
+   
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+    
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .search input {
+            border: none;
+            padding: 8px;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .search button {
+            background-color: #2575fc;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        main {
+            padding: 30px 15px;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .profile-photo-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid white;
+            transition: transform 0.3s;
+        }
+
+        .profile-photo-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-custom {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .profile-photo-container img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#sdg">SDG No. 5</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <main>
+        <section id="home" class="card text-center">
+            <h1 id="greeting"></h1>
+            <p id="description"></p>
+            <div class="profile-photo-container">
+                <img src="jannu.jpg" alt="Professional Photo">
+            </div>
+            <a href="#contact" class="btn btn-custom mt-3">Get In Touch</a>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Skills and Expertise</h2>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <p>HTML</p>
+                    <img src="ht.png" alt="HTML Icon" style="width: 50px;">
+                </div>
+                <div>
+                    <p>CSS</p>
+                    <img src="css.png" alt="CSS Icon" style="width: 50px;">
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <img src="js.png" alt="JavaScript Icon" style="width: 50px;">
+                </div>
+            </div>
+        </section>
+
+<!-- Projects Section -->
+<section id="projects" class="card">
+    <h2>Project Showcase</h2>
+    <div class="d-flex flex-wrap justify-content-around">
+
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="GenderE.png" alt="Project 1">
+            <div class="project-overlay">
+                <h3>Impactful Gender Equality Initiatives</h3>
+                <p>Promoting gender equality is essential for building inclusive and sustainable communities. Below are examples of impactful initiatives that align with Sustainable Development Goal (SDG) No. 5 – Gender Equality, showcasing efforts to empower women and marginalized genders through technology, education, and innovation.</p>
+            </div>
+        </div>
+
+        <div class="card project-card">
+                <img src="image2.png" alt="Project 1">
+                <div class="card-body">
+                    <h3>Grow Women on Leadership</h3>
+                    <p>It is a critical goal for fostering equity, innovation, and inclusive decision-making across all sectors. Currently, women hold an average of 31% of leadership roles globally. While this marks progress, significant gaps remain, particularly in certain industries.</p>
+                    <a link href="https://www.apa.org/topics/women-girls/female-leaders-make-work-better" class="btn btn-custom">View Project</a>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <img src="image3.png" alt="Project 2">
+                <div class="card-body">
+                    <h3>Mentor-mentee Programs for Equality</h3>
+                    <p>It is crucial step toward fostering diversity, inclusion, and equity in the workplace. Mentorship provides these individuals with the guidance, support, and tools they need to navigate professional challenges and seize opportunities for growth.</p>
+                    <a link href="https://genderhealthdata.org/mentorship-program/" class="btn btn-custom">View Project</a>
+                </div>
+            </div>
+
+        <div class="card project-card">
+            <img src="image4.png" alt="Project 3" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">Launch Equality Awareness Campaigns</h3>
+                <p class="card-text">Educating on bias and inclusivity is crucial for fostering a more equitable and understanding society. Bias, whether implicit or explicit, often influences decision-making, interpersonal interactions, and the creation of policies.</p>
+                <a href="https://eige.europa.eu/gender-mainstreaming/tools-methods/gender-awareness-raising?language_content_entity=en" class="btn btn-custom">View Project</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src="image5.png" alt="Project 4" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">Diversity in Talent Acquisition</h3>
+                <p class="card-text">Embedding diversity throughout hiring and retention processes requires a deliberate focus on inclusive talent acquisition strategies. This ensures that diverse talent is not only attracted but also retained and empowered to thrive within the organization.</p>
+                <a href="https://blog.radancy.com/2024/06/24/talent-acquisition-diversity-equity-inclusion-deib/" class="btn btn-custom">View Project</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src="image6.png" alt="Project 5" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">Leadership Training for Equality</h3>
+                <p class="card-text">Regular training sessions should be interactive, scenario-based, and tailored to the specific needs of the organization. By investing in ongoing education, businesses can ensure long-term improvements in diversity, equity, and inclusion. </p>
+                <a href="https://www.tssg.ca/leadership-skills-for-developing-equality-diversity-and-inclusion-in-the-workplace/" class="btn btn-custom">View Project</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src="image7.png" alt="Project 6" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">Engage Male Allies</h3>
+                <p class="card-text">Fostering male allyship in organizations is essential to breaking down barriers and creating supportive, collaborative environments. Encouraging men to challenge biases, speak up against discrimination, and mentor or support women in their personal and professional growth creates a collaborative effort toward equality.</p>
+                <a href="https://www.weforum.org/agenda/2021/11/why-male-allyship-matters-for-gender-equality/" class="btn btn-custom">View Project</a>
+            </div>
+        </div>
+</section>
+        
+<!-- SDG Section -->
+<section id="sdg" class="card">
+    <h3>SDG No. 5: Gender Equality</h3>
+    <div class="d-flex flex-wrap justify-content-around">
+
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="lgbt.jpg" alt="LGBT Icon">
+            <div class="project-overlay">
+                <h3>Gender Equality</h3>
+                <p>Is a fundamental human right and a cornerstone for a sustainable and prosperous world. It involves addressing disparities, providing equal opportunities for all genders, and dismantling systemic barriers that perpetuate discrimination. Achieving gender equality empowers individuals, enhances economic growth, and strengthens societies by fostering inclusivity and equal representation in all areas of life.</p>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="img4.jpg" alt="Workplace Icon">
+                <img src="img6.jpg" alt="Workplace Icon">
+                <img src="img7.jpg" alt="Workplace Icon">
+                <div class="project-overlay">
+                    <h3>Creative Media Projects</h3>
+                    <p>Harnessing the power of creative media, you can craft compelling stories, visuals, and campaigns that promote gender equality. Whether through short films, podcasts, social media content, or graphic design, these projects can challenge stereotypes, amplify underrepresented voices, and inspire meaningful conversations. Through media, you have the ability to shift mindsets and make gender equality a reality.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="gender-equality2.png" alt="Workplace Icon">
+                <img src="img1.png" alt="Workplace Icon">
+                <div class="project-overlay">
+                    <h3>Workplace Inclusion</h3>
+                    <p>Offering diversity training and awareness programs helps employees understand the importance of inclusion and respect for different perspectives. Providing mentorship programs and leadership opportunities for underrepresented groups, including women and marginalized genders, encourages career growth and representation. Cultivating an inclusive culture also involves creating safe spaces where employees can voice their concerns and ideas without fear of discrimination or judgment.</p>
+                </div>
+            </div>
+        </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="gender-equality3.jpg" alt="Workplace Icon">
+                    <img src="img2.png" alt="Workplace Icon">
+                    <img src="img3.png" alt="Workplace Icon">
+                    <div class="project-overlay">
+                        <h3>Empowerment</h3>
+                        <p>Empowerment is about equipping individuals with the knowledge, skills, and opportunities they need to realize their full potential and make meaningful contributions to society. It starts with creating an environment that values and respects every voice, fostering confidence and self-belief. Empowerment also involves challenging systemic barriers and advocating for policies that promote fairness and equality.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+
+        <section id="contact" class="card">
+            <link rel="icon" type="image/png" href="favicon.png">
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Get In Touch</h2>
+                    </div>
+                    
+                    <div class="contact" id="contact">
+                        <div class="contact-box">
+                            <div class="contact-image">
+                                <img src="GE.png">
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <div class="contact-body">
+                                <form>
+                                    <h2>Contact Me</h2>
+                                    <div class="form-content">
+                                        <input type="text" required>
+                                        <span></span>
+                                        <label>Full Name</label>
+                                    </div>
+                                    <div class="form-content">
+                                        <input type="email" required>
+                                        <span></span>
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="form-content">
+                                        <input type="Message" required>
+                                        <span></span>
+                                        <label>Message</label>
+                                    </div>
+                                    <button type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+            <div class="d-flex justify-content-around">
+                <div class="text-center">
+                    <p>Email</p>
+                    <img src="Email-icon.png" alt="Email Icon" style="width: 50px;">
+                    <p>24-05806@g.batstate-u.edu.ph</p>
+                </div>
+                <div class="text-center">
+                    <p>Phone</p>
+                    <img src="iphone.png" alt="Phone Icon" style="width: 50px;">
+                    <p>+63 993 958 2870</p>
+                </div>
+                <div class="text-center">
+                    <p>Social Media</p>
+                    <img src="fb.png" alt="Social Media" style="width: 50px;">
+                    <p>Laurence Panganiban</p>
+                </div>
+            
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jann Laurence Panganiban. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+    
+        function typeText(elementId, text, speed) {
+            let element = document.getElementById(elementId);
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        
+        function greetUser() {
+            var greetingElement = document.getElementById("greeting");
+            var descriptionElement = document.getElementById("description");
+
+            var currentTime = new Date().getHours();
+            let greetingText = "";
+            let descriptionText = "";
+
+            if (currentTime < 12) {
+                greetingText = "Good Morning!";
+                descriptionText = "Hi there! I'm Jann Laurence Panganiban, an 18-year-old Information Technology student, currently studying at Batangas State University Alangilan Campus. As an aspiring IT professional, my goal is to build impactful and user-friendly solutions that address real-world challenges while embracing emerging technologies and would like to become a web developer, cybersecurity, and software engineer. I am always eager to learn, grow, and contribute to meaningful projects. Let’s connect and create something amazing! Have a great day!";
+            } else if (currentTime < 18) {
+                greetingText = "Good Afternon!";
+                descriptionText = "Hi there! I'm Jann Laurence Panganiban, an 18-year-old Information Technology student, currently studying at Batangas State University Alangilan Campus. As an aspiring IT professional, my goal is to build impactful and user-friendly solutions that address real-world challenges while embracing emerging technologies and would like to become a web developer, cybersecurity, and software engineer. I am always eager to learn, grow, and contribute to meaningful projects. Let’s connect and create something amazing! Sleepy afternoon?";
+            } else {
+                greetingText = "Good Evening!";
+                descriptionText = "Hi there! I'm Jann Laurence Panganiban, an 18-year-old Information Technology student, currently studying at Batangas State University Alangilan Campus. As an aspiring IT professional, my goal is to build impactful and user-friendly solutions that address real-world challenges while embracing emerging technologies and would like to become a web developer, cybersecurity, and software engineer. I am always eager to learn, grow, and contribute to meaningful projects. Let’s connect and create something amazing! Winding down after a long day?";
+            }
+
+          
+            typeText("greeting", greetingText, 100);
+
+          
+            setTimeout(function() {
+                typeText("description", descriptionText, 50);
+            }, greetingText.length * 100);  
+        }
+
+       
+        window.onload = greetUser;
+    </script>
+</body>
+</html>
